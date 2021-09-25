@@ -21,8 +21,22 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	// aws
+	implementation("software.amazon.awssdk:auth:2.8.3")
+	implementation("software.amazon.awssdk:athena:2.8.3")
+	implementation("com.amazonaws:aws-java-sdk:1.11.627")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8")
+	implementation("com.github.vladimir-bukhtoyarov:bucket4j-core:4.10.0")
+
+	// test
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
+	testImplementation("io.mockk:mockk:1.12.0")
+
+	testImplementation("org.mockito:mockito-junit-jupiter:2.19.0")
+	testImplementation("org.mockito:mockito-core:2.19.0")
+
 }
 
 tasks.withType<KotlinCompile> {
